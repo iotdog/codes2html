@@ -98,6 +98,7 @@ class Codes2HtmlTool:
             write_fd.write(self._header())
             for path in args.sources:
                 self._collect_files(path)
+            print('total lines: {0}'.format(self.written_lines))
             write_fd.write(self._footer())
 
     def _should_ignore_file(self, name):

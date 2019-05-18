@@ -46,3 +46,9 @@ optional arguments:
                         file footer string, you can use </br> to insert lines.
                         default is </br>
 ```
+
+for example:
+
+```
+python3.7 codes2html.py ./test -e js,wxml,wxss -i test_ignore.txt  -o test.html
+```
