@@ -149,6 +149,9 @@ class Codes2HtmlTool:
             if commentFlag:
                 continue
             idx = line.find('//') # 删除行内注释
+            # 排除链接URL内带有//的情况
+            if line[idx-1] == ':':
+                idx = 0
             if idx > 0:
                 line = line[:idx]
             new_lines.append(line)
