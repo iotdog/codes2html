@@ -139,7 +139,7 @@ class Codes2HtmlTool:
         commentFlag = False
         for line in lines:
             tmp = line.strip()
-            if '' == tmp or tmp.startswith('//'):
+            if '' == tmp or tmp.startswith('//') or tmp.startswith('#'):
                 continue
             if tmp.startswith('/*') or tmp.startswith('<!--'):
                 commentFlag = True
